@@ -17,6 +17,9 @@ kotlin {
         homepage = "Link to the Shared Module homepage"
         ios.deploymentTarget = "14.1"
         podfile = project.file("../iosApp/Podfile")
+        pod("AFNetworking")
+        pod ("Ably", ">= 1.2")
+        //pod ("MQTTClient")
         framework {
             baseName = "shared"
         }
@@ -30,7 +33,9 @@ kotlin {
                 implementation(kotlin("test-annotations-common"))
             }
         }
-        val androidMain by getting
+        val androidMain by getting {
+
+        }
         val androidTest by getting {
             dependencies {
                 implementation(kotlin("test-junit"))

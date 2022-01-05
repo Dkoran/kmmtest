@@ -13,7 +13,8 @@ Pod::Spec.new do |spec|
 
     spec.ios.deployment_target = '14.1'
 
-                
+    spec.dependency 'AFNetworking'
+    spec.dependency 'Ably', '>= 1.2'
 
     spec.pod_target_xcconfig = {
         'KOTLIN_PROJECT_PATH' => ':shared',
